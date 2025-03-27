@@ -1,0 +1,40 @@
+<div class="cadastro-container">
+  <h2>Cadastro</h2>
+  <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+    <div>
+      <label for="login">Login (Email)</label>
+      <input
+        id="login"
+        formControlName="login"
+        type="email"
+        placeholder="Digite seu email"
+      />
+    </div>
+
+    <div>
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        formControlName="senha"
+        type="password"
+        placeholder="Digite sua senha"
+      />
+    </div>
+
+    <div>
+      <label for="confirmSenha">Confirmar Senha</label>
+      <input
+        id="confirmSenha"
+        formControlName="confirmSenha"
+        type="password"
+        placeholder="Confirme sua senha"
+      />
+    </div>
+
+    <button type="submit" [disabled]="formulario.invalid">Cadastrar</button>
+
+    <div class="register-link">
+      <p>Já possui uma conta? <a routerLink="/login">Faça seu login</a></p>
+    </div>
+  </form>
+</div>
