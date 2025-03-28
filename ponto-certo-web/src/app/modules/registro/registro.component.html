@@ -1,7 +1,22 @@
 <div class="container">
   <div class="card">
     <h2>Marcação de Ponto</h2>
-    <p>{{ dateTime | date : "dd/MM/yyyy HH:mm:ss" }}</p>
+    <div class="relogio">
+      <div class="hour">
+        <p>{{ dateTime | date : "HH" }}</p>
+      </div>
+      <p class="separator">:</p>
+      <div class="minute">
+        <p>{{ dateTime | date : "mm" }}</p>
+      </div>
+      <p class="separator">:</p>
+      <div class="second">
+        <p>{{ dateTime | date : "ss" }}</p>
+      </div>
+    </div>
+    <div class="calendario">
+      <p>{{ dateTime | date : "dd/MM/yyyy" }}</p>
+    </div>
     <button (click)="registrarPonto()">Registrar Ponto</button>
   </div>
 </div>

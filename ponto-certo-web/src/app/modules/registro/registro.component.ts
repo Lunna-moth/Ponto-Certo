@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class RegistroComponent {
   dateTime: Date = new Date();
-  registros: string[] = [];
 
   constructor() {
     setInterval(() => {
@@ -16,7 +15,6 @@ export class RegistroComponent {
   }
 
   registrarPonto() {
-    this.registros.push(this.dateTime.toLocaleString());
-    console.log('### Ponto Registrado => ', this.registros);
+    console.log('### Ponto Registrado => ', this.dateTime.toISOString());
   }
 }
