@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import {
 export class LoginComponent implements OnInit {
   formulario: FormGroup;
 
-  constructor(readonly formBuilder: FormBuilder) {}
+  constructor(readonly formBuilder: FormBuilder, readonly router: Router) {}
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
@@ -25,9 +26,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.formulario.valid) {
-      console.log('### Formulário => ', this.formulario.value);
-    } else {
-      console.log('### Formulário Inválido');
+      this.router.navigate(['home']);
     }
   }
 }
