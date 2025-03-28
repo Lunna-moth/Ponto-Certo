@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { HistoricoComponent } from './modules/historico/historico.component';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 import { RegistroComponent } from './modules/registro/registro.component';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { RegistroComponent } from './modules/registro/registro.component';
     ReactiveFormsModule,
     CommonModule,
     MenubarModule,
+    TableModule,
     ButtonModule,
   ],
   providers: [],
