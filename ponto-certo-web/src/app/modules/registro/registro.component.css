@@ -1,3 +1,30 @@
+.logo-navbar {
+  height: 40px;
+}
+
+header {
+  background-color: var(--cor-secundaria);
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: var(--cor-terciaria);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link.ativo {
+  color: var(--cor-terciaria);
+  background-color: var(--cor-destaque);
+}
+
 .container {
   display: flex;
   flex-direction: column;
