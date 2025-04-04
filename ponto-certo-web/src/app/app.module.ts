@@ -8,7 +8,6 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { HomeComponent } from './modules/home/home.component';
 import { CommonModule } from '@angular/common';
 import { HistoricoComponent } from './modules/historico/historico.component';
-import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { RegistroComponent } from './modules/registro/registro.component';
@@ -27,7 +26,6 @@ import { RegistroComponent } from './modules/registro/registro.component';
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
-    MenubarModule,
     TableModule,
     ButtonModule,
   ],

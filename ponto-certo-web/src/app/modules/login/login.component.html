@@ -24,8 +24,8 @@
             <input
               id="login"
               formControlName="login"
-              type="email"
-              placeholder="Digite seu email"
+              type="text"
+              placeholder="Digite seu login"
             />
             <div
               *ngIf="
@@ -35,9 +35,6 @@
             >
               <small *ngIf="formulario.get('login')?.hasError('required')"
                 >O email é obrigatório.</small
-              >
-              <small *ngIf="formulario.get('login')?.hasError('email')"
-                >O email deve ser válido.</small
               >
             </div>
           </div>
