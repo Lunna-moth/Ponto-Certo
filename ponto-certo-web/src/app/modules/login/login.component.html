@@ -1,54 +1,88 @@
 <div class="login-container">
-  <h2>Login</h2>
-  <form [formGroup]="formulario" (ngSubmit)="login()">
-    <div>
-      <label for="login">Login (Email)</label>
-      <input
-        id="login"
-        formControlName="login"
-        type="email"
-        placeholder="Digite seu email"
-      />
-      <div
-        *ngIf="
-          formulario.get('login')?.invalid && formulario.get('login')?.touched
-        "
-      >
-        <small *ngIf="formulario.get('login')?.hasError('required')"
-          >O email é obrigatório.</small
+  <div class="container row justify-content-between align-items-center">
+    <div class="container-form col justify-content-center align-items-center">
+      <div>
+        <img
+          src="/assets/img/LogoPontoCerto.png"
+          alt=""
+          class="logo-pontocerto"
+        />
+      </div>
+
+      <div>
+        <h4 class="titulo-login">Acesse sua conta</h4>
+      </div>
+
+      <div class="col justify-content-center">
+        <form
+          [formGroup]="formulario"
+          (ngSubmit)="login()"
+          class="align-self-center"
         >
-        <small *ngIf="formulario.get('login')?.hasError('email')"
-          >O email deve ser válido.</small
-        >
+          <div>
+            <label for="login">Login (Email)</label>
+            <input
+              id="login"
+              formControlName="login"
+              type="email"
+              placeholder="Digite seu email"
+            />
+            <div
+              *ngIf="
+                formulario.get('login')?.invalid &&
+                formulario.get('login')?.touched
+              "
+            >
+              <small *ngIf="formulario.get('login')?.hasError('required')"
+                >O email é obrigatório.</small
+              >
+              <small *ngIf="formulario.get('login')?.hasError('email')"
+                >O email deve ser válido.</small
+              >
+            </div>
+          </div>
+
+          <div>
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              formControlName="senha"
+              type="password"
+              placeholder="Digite sua senha"
+            />
+            <div
+              *ngIf="
+                formulario.get('senha')?.invalid &&
+                formulario.get('senha')?.touched
+              "
+            >
+              <small *ngIf="formulario.get('senha')?.hasError('required')"
+                >A senha é obrigatória.</small
+              >
+              <small *ngIf="formulario.get('senha')?.hasError('minlength')"
+                >A senha deve ter pelo menos 6 caracteres.</small
+              >
+            </div>
+          </div>
+
+          <div>
+            <a href="#" class="text-sm">Esqueceu a senha ou login?</a>
+          </div>
+
+          <button type="submit" [disabled]="formulario.invalid">Login</button>
+
+          <div class="register-link text-center">
+            <p>
+              Não possui uma conta? <br />
+              <a routerLink="/cadastro">Cadastre-se aqui</a>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
 
-    <div>
-      <label for="senha">Senha</label>
-      <input
-        id="senha"
-        formControlName="senha"
-        type="password"
-        placeholder="Digite sua senha"
-      />
-      <div
-        *ngIf="
-          formulario.get('senha')?.invalid && formulario.get('senha')?.touched
-        "
-      >
-        <small *ngIf="formulario.get('senha')?.hasError('required')"
-          >A senha é obrigatória.</small
-        >
-        <small *ngIf="formulario.get('senha')?.hasError('minlength')"
-          >A senha deve ter pelo menos 6 caracteres.</small
-        >
-      </div>
+    <div class="col align-self-center">
+      <img src="/assets/img/FundoLogin.png" alt="" />
     </div>
-
-    <button type="submit" [disabled]="formulario.invalid">Login</button>
-
-    <div class="register-link">
-      <p>Não tem uma conta? <a routerLink="/cadastro">Cadastre-se aqui</a></p>
-    </div>
-  </form>
+  </div>
 </div>
