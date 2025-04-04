@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../models/usuario';
 
 @Injectable({
   providedIn: 'root',
@@ -7,9 +8,9 @@ import { Router } from '@angular/router';
 export class AuthService {
   constructor(private router: Router) {}
 
-  login(username: string, password: string): boolean {
-    if (username === 'admin' && password === '1234') {
-      localStorage.setItem('user', JSON.stringify({ username }));
+  login(usuario: Usuario): boolean {
+    if (usuario.login === 'admin' && usuario.senha === '1234') {
+      localStorage.setItem('user', JSON.stringify(usuario));
       return true;
     }
     return false;

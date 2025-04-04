@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
+import { TipoMarcacao } from 'src/app/enums/tipo-marcacao.enum';
+import { Registro } from 'src/app/models/registro';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-registro',
@@ -7,6 +10,8 @@ import * as L from 'leaflet';
   styleUrls: ['./registro.component.css'],
 })
 export class RegistroComponent {
+  registro: Registro = new Registro();
+  registros: Registro[] = [];
   dateTime: Date = new Date();
   latitude: number = 0;
   longitude: number = 0;
@@ -50,11 +55,54 @@ export class RegistroComponent {
     }
   }
 
+  recuperarUsuario() {
+    const usuarioLogado = localStorage.getItem('user');
+
+    if (usuarioLogado) {
+      const usuario: Usuario = JSON.parse(usuarioLogado);
+      return usuario;
+    } else {
+      console.log('### Falha ao recuperar usuário');
+      return new Usuario();
+    }
+  }
+
   registrarPonto() {
-    console.log('### Ponto Registrado => ', {
-      data: this.dateTime.toISOString(),
-      latitude: this.latitude,
-      longitude: this.longitude,
-    });
+    this.registro.tipoMarcacao = TipoMarcacao.ENTRADA;
+    this.registro.data = this.dateTime;
+    this.registro.dataIsoString = this.dateTime.toISOString();
+    this.registro.latitude = this.latitude;
+    this.registro.longitude = this.longitude;
+    this.registro.usuario = this.recuperarUsuario();
+
+    console.log('### Ponto Registrado => ', this.registro);
+    this.salvarRegistrosNoStorage();
+  }
+
+  salvarRegistrosNoStorage() {
+    const registrosString = localStorage.getItem('registro');
+    let registros: Registro[] = [];
+
+    if (registrosString) {
+      try {
+        registros = JSON.parse(registrosString); // Converte JSON para array
+        if (!Array.isArray(registros)) {
+          registros = []; // Garante que seja um array
+        }
+        registros.map((registro) => {
+          registro.tipoMarcacao === TipoMarcacao.ENTRADA
+            ? (registro.tipoMarcacao = TipoMarcacao.SAIDA)
+            : (registro.tipoMarcacao = TipoMarcacao.ENTRADA);
+        });
+      } catch (error) {
+        console.error('Erro ao recuperar registros do localStorage:', error);
+        registros = [];
+      }
+    }
+
+    registros.push(this.registro);
+
+    // Salva o array atualizado no localStorage
+    localStorage.setItem('registro', JSON.stringify(registros));
   }
 }

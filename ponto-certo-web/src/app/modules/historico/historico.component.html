@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card">
     <h2>Histórico de Marcações</h2>
-    <p-table [value]="mocks">
+    <p-table [value]="registros">
       <ng-template pTemplate="header">
         <tr>
           <th>Nome</th>
@@ -10,12 +10,12 @@
           <th>Hora</th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-mock>
+      <ng-template pTemplate="body" let-registro>
         <tr>
-          <td>{{ mock.nome }}</td>
-          <td>{{ mock.tipoMarcacao }}</td>
-          <td>{{ mock.dateTime | date : "dd/MM/yyyy" }}</td>
-          <td>{{ mock.dateTime | date : "HH:mm:ss" }}</td>
+          <td>{{ registro.usuario.login }}</td>
+          <td>{{ registro.tipoMarcacao }}</td>
+          <td>{{ registro.data | date : "dd/MM/yyyy" }}</td>
+          <td>{{ registro.data | date : "HH:mm:ss" }}</td>
         </tr>
       </ng-template>
     </p-table>

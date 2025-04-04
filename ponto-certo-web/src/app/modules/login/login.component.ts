@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -15,6 +16,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   formulario: FormGroup;
+  usuario: Usuario = new Usuario();
 
   constructor(
     readonly authService: AuthService,
@@ -31,10 +33,10 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.formulario.valid) {
-      var username = this.formulario.get('login')?.value;
-      var password = this.formulario.get('senha')?.value;
+      this.usuario.login = this.formulario.get('login')?.value;
+      this.usuario.senha = this.formulario.get('senha')?.value;
 
-      if (this.authService.login(username, password)) {
+      if (this.authService.login(this.usuario)) {
         this.router.navigate(['home']);
       } else {
         console.log('Usuário ou senha inválidos!');
