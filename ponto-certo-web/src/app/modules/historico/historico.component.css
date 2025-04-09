@@ -40,8 +40,6 @@ header {
   background-color: var(--cor-destaque);
 }
 
-
-
 /* Estilo do container principal */
 .container {
   display: flex;
@@ -51,6 +49,11 @@ header {
   margin-top: 30px;
   margin-left: 310px;
   width: 100vw-280px;
+}
+
+.pagina-titulo {
+  align-self: flex-start;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo da card onde a tabela estará */
@@ -67,8 +70,9 @@ header {
 /* Título da Card */
 .card h2 {
   margin-bottom: 20px;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #333;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo da tabela */
@@ -87,11 +91,12 @@ p-table td {
   text-align: center;
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo para os cabeçalhos da tabela */
 p-table th {
-  background-color: #0056b3;
+  background-color: var(--cor-terciaria);
   color: white;
   font-weight: bold;
 }
