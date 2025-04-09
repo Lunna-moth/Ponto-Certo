@@ -3,18 +3,8 @@
 }
 
 header {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-destaque);
 }
-
-/* .sidebar {
-  margin: 0;
-  padding: 0;
-  width: 280px;
-  background-color: var(--cor-terciaria);
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
-} */
 
 .sidebar {
   display: flex;
