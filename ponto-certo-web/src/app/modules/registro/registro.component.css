@@ -3,21 +3,36 @@
 }
 
 header {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-destaque);
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
-  padding: 0;
-  width: 200px;
+  padding: 1rem;
+  width: 280px;
   background-color: var(--cor-terciaria);
   position: fixed;
-  height: 100%;
-  overflow: auto;
+  height: 100vh;
+  overflow: hidden; /* ou auto, se quiser scroll interno */
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
 }
 
 .nav-link {
   color: white;
+  font-family: var(--fonte-principal);
+  margin-bottom: 7px;
 }
 
 .nav-link.ativo {
@@ -31,6 +46,13 @@ header {
   align-items: center;
   padding: 20px;
 }
+
+.main {
+  margin-top: 50px;
+  margin-left: 280px;
+  width: 100vw-280px;
+}
+
 .card {
   background: white;
   width: 50vw;
@@ -40,6 +62,11 @@ header {
   text-align: center;
   margin-bottom: 10px;
 }
+
+.registro-titulo {
+  font-family: var(--fonte-principal);
+}
+
 .relogio {
   display: flex;
   justify-content: center;
@@ -64,20 +91,49 @@ header {
   font-size: 1.5em;
   color: #333;
 }
+
 button {
   padding: 10px 20px;
   margin-top: 10px;
   border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
+  background-color: var(--cor-destaque);
+  color: black;
+  border-radius: 20px;
   cursor: pointer;
+  font-family: var(--fonte-principal);
+  font-weight: 500;
 }
+
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--cor-secundaria);
 }
+
 #map {
   height: 300px;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.historico-container {
+  background-color: var(--cor-terciaria);
+}
+
+.texto-historico {
+  font-family: var(--fonte-principal);
+  color: var(--cor-branca);
+}
+
+.texto-hora {
+  font-family: var(--fonte-principal);
+  color: var(--cor-branca);
+}
+
+.texto-hora-entrada {
+  font-family: var(--fonte-principal);
+  color: var(--cor-destaque);
+}
+
+.texto-data {
+  font-family: var(--fonte-principal);
+  color: var(--cor-branca);
 }

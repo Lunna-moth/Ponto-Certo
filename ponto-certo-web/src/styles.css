@@ -1,10 +1,12 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css"; /* Tema */
 @import "primeng/resources/primeng.min.css"; /* Estilos do PrimeNG */
 @import "primeicons/primeicons.css"; /* Ícones */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 :root {
   --cor-background-escuro: #1c191a;
   --cor-texto-claro: #f6e7d8;
+  --cor-branca: #ffffff;
   --cor-destaque: #f4b324;
   --cor-secundaria: #f2cb38;
   --cor-terciaria: #303030;
