@@ -1,0 +1,7 @@
+.logo-navbar {
+  height: 40px;
+}
+
+header {
+  background-color: var(--cor-destaque);
+}

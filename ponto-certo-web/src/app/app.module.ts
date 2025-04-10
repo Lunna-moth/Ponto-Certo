@@ -11,6 +11,8 @@ import { HistoricoComponent } from './modules/historico/historico.component';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { RegistroComponent } from './modules/registro/registro.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { RegistroComponent } from './modules/registro/registro.component';
     HomeComponent,
     HistoricoComponent,
     RegistroComponent,
+    SidebarComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
