@@ -90,9 +90,11 @@ export class RegistroComponent {
           registros = []; // Garante que seja um array
         }
         registros.map((registro) => {
-          registro.tipoMarcacao === TipoMarcacao.ENTRADA
-            ? (registro.tipoMarcacao = TipoMarcacao.SAIDA)
-            : (registro.tipoMarcacao = TipoMarcacao.ENTRADA);
+          if (registro.tipoMarcacao === TipoMarcacao.ENTRADA) {
+            this.registro.tipoMarcacao = TipoMarcacao.SAIDA;
+          } else {
+            this.registro.tipoMarcacao = TipoMarcacao.ENTRADA;
+          }
         });
       } catch (error) {
         console.error('Erro ao recuperar registros do localStorage:', error);

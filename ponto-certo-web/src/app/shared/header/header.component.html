@@ -62,10 +62,16 @@
           </svg>
         </a>
         <ul class="dropdown-menu text-small">
-          <li><a class="dropdown-item" href="#">Meu perfil</a></li>
-          <li><a class="dropdown-item" href="#">Configurações</a></li>
+          <li>
+            <a class="dropdown-item" routerLink="/meu-perfil">Meu perfil</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/configuracao"
+              >Configurações</a
+            >
+          </li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="#">Sair</a></li>
+          <li><a class="dropdown-item" (click)="logout()">Sair</a></li>
         </ul>
       </div>
     </div>

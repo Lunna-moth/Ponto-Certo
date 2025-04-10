@@ -13,6 +13,9 @@ import { TableModule } from 'primeng/table';
 import { RegistroComponent } from './modules/registro/registro.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { MeuPerfilComponent } from './modules/meu-perfil/meu-perfil.component';
+import { MinhaEquipeComponent } from './modules/minha-equipe/minha-equipe.component';
+import { ConfiguracaoComponent } from './modules/configuracao/configuracao.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { HeaderComponent } from './shared/header/header.component';
     RegistroComponent,
     SidebarComponent,
     HeaderComponent,
+    MeuPerfilComponent,
+    MinhaEquipeComponent,
+    ConfiguracaoComponent,
   ],
   imports: [
     BrowserModule,
