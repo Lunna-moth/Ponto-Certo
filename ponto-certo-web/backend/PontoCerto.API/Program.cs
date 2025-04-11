@@ -5,17 +5,14 @@ using PontoCerto.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do Kestrel para funcionar no Render
-builder.WebHost.ConfigureKestrel(options =>
+// 🔧 Força o uso da porta definida pelo Render
+builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-  var port = Environment.GetEnvironmentVariable("PORT");
-  if (!string.IsNullOrEmpty(port))
-  {
-    options.ListenAnyIP(int.Parse(port));
-  }
+  var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+  serverOptions.ListenAnyIP(int.Parse(port));
 });
 
-// Add services to the container.
+// Services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -29,13 +26,9 @@ builder.Services.AddScoped<IRepository<SolicitacaoPonto>, SolicitacaoPontoReposi
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-  app.UseSwagger();
-  app.UseSwaggerUI();
-}
-
+// Middleware
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthorization();
 app.MapControllers();
