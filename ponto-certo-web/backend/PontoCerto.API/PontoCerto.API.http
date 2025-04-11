@@ -1,4 +1,4 @@
-@PontoCerto.API_HostAddress = http://localhost:5172
+@PontoCerto.API_HostAddress = http://localhost:5202
 
 GET {{PontoCerto.API_HostAddress}}/weatherforecast/
 Accept: application/json

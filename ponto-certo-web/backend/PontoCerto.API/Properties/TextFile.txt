@@ -1,0 +1,23 @@
+- Definir Controller Usuario (feito)
+  Testar Métodos:
+  - GetAll (feito)
+  - PostUsuario (feito)
+  - GetById Usuario (feito)
+  - Put Update Usuario (feito)
+  - Delete Usuario (feito)
+
+- Definir Controller SOlicitacaoPontoController (feito)
+  Testar Métodos:
+  - GetAll (feito)
+  - Post (feito)
+  - GetById  (feito)
+  - Update  (feito)
+  - Delete  (feito)
+
+- Definir Controller PontoController
+  Testar Métodos:
+  - GetAll (feito)
+  - PostPonto (feito)
+  - GetById Ponto (feito)
+  - Put Update Ponto (feito)
+  - Delete Ponto (feito)
