@@ -1,9 +1,59 @@
+.logo-navbar {
+  height: 40px;
+}
+
+header {
+  background-color: var(--cor-destaque);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem;
+  width: 280px;
+  background-color: var(--cor-terciaria);
+  position: fixed;
+  height: 100vh;
+  overflow: hidden; /* ou auto, se quiser scroll interno */
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.nav-link {
+  color: white;
+  font-family: var(--fonte-principal);
+  margin-bottom: 7px;
+}
+
+.nav-link.ativo {
+  color: var(--cor-terciaria);
+  background-color: var(--cor-destaque);
+}
+
 /* Estilo do container principal */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
+  margin-left: 310px;
+  width: 100vw-280px;
+}
+
+.pagina-titulo {
+  align-self: flex-start;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo da card onde a tabela estará */
@@ -20,8 +70,9 @@
 /* Título da Card */
 .card h2 {
   margin-bottom: 20px;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #333;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo da tabela */
@@ -40,11 +91,12 @@ p-table td {
   text-align: center;
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
+  font-family: var(--fonte-principal);
 }
 
 /* Estilo para os cabeçalhos da tabela */
 p-table th {
-  background-color: #0056b3;
+  background-color: var(--cor-terciaria);
   color: white;
   font-weight: bold;
 }

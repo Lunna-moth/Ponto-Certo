@@ -1,40 +1,65 @@
-<div class="cadastro-container">
-  <h2>Cadastro</h2>
-  <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
-    <div>
-      <label for="login">Login (Email)</label>
-      <input
-        id="login"
-        formControlName="login"
-        type="email"
-        placeholder="Digite seu email"
-      />
+<div class="login-container">
+  <div class="container row justify-content-between align-items-center">
+    <div class="container-form col justify-content-center align-items-center">
+      <div>
+        <img
+          src="/assets/img/LogoPontoCerto.png"
+          alt=""
+          class="logo-pontocerto"
+        />
+      </div>
+
+      <div>
+        <h3 class="titulo-login">Cadastre-se</h3>
+      </div>
+
+      <div class="cadastro-container">
+        <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+          <div>
+            <label for="login">Login (Email)</label>
+            <input
+              id="login"
+              formControlName="login"
+              type="email"
+              placeholder="Digite seu email"
+            />
+          </div>
+
+          <div>
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              formControlName="senha"
+              type="password"
+              placeholder="Digite sua senha"
+            />
+          </div>
+
+          <div>
+            <label for="confirmSenha">Confirmar Senha</label>
+            <input
+              id="confirmSenha"
+              formControlName="confirmSenha"
+              type="password"
+              placeholder="Confirme sua senha"
+            />
+          </div>
+
+          <button type="submit" [disabled]="formulario.invalid">
+            Cadastrar
+          </button>
+
+          <div class="register-link">
+            <p>
+              Já possui uma conta? <a routerLink="/login">Faça seu login</a>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <div>
-      <label for="senha">Senha</label>
-      <input
-        id="senha"
-        formControlName="senha"
-        type="password"
-        placeholder="Digite sua senha"
-      />
+    <div class="col align-self-center">
+      <img src="/assets/img/FundoCadastro.png" alt="" />
     </div>
-
-    <div>
-      <label for="confirmSenha">Confirmar Senha</label>
-      <input
-        id="confirmSenha"
-        formControlName="confirmSenha"
-        type="password"
-        placeholder="Confirme sua senha"
-      />
-    </div>
-
-    <button type="submit" [disabled]="formulario.invalid">Cadastrar</button>
-
-    <div class="register-link">
-      <p>Já possui uma conta? <a routerLink="/login">Faça seu login</a></p>
-    </div>
-  </form>
+  </div>
 </div>
