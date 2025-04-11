@@ -43,20 +43,12 @@
       "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:models\\ponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250410123257_MudancaPropriedadesPonto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250410123257_MudancaPropriedadesPonto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\models\\enums\\tipomarcacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:models\\enums\\tipomarcacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\migrations\\20250408124032_criacaodastabelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:migrations\\20250408124032_criacaodastabelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250410122059_CorecaoBanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250410122059_CorecaoBanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\repositories\\pontorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,6 +93,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\migrations\\20250408223503_mudandopropriedadesdatabelaponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:migrations\\20250408223503_mudandopropriedadesdatabelaponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\migrations\\20250410123257_mudancapropriedadesponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:migrations\\20250410123257_mudancapropriedadesponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|c:\\users\\laura\\rennan\\ponto-certo\\ponto-certo-web\\backend\\pontocerto.api\\migrations\\20250410122059_corecaobanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF42364-6830-415C-9B81-063C89417A0F}|PontoCerto.API.csproj|solutionrelative:migrations\\20250410122059_corecaobanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,8 +126,7 @@
               "RelativeToolTip": "Migrations\\20250410125519_MudancaTabelaSolicitacaoPonto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:55:19.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T12:55:19.49Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAwwDsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:12:53.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T13:12:53.7Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "Controllers\\SolicitacaoPontoController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:13:24.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T13:13:24.208Z"
             },
             {
               "$type": "Document",
@@ -165,8 +162,7 @@
               "RelativeToolTip": "Models\\SolicitacaoPonto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:22:02.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:22:02.777Z"
             },
             {
               "$type": "Document",
@@ -178,8 +174,7 @@
               "RelativeToolTip": "Repositories\\SolicitacaoPontoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:44:24.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:44:24.821Z"
             },
             {
               "$type": "Document",
@@ -191,8 +186,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:14:23.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:14:23.166Z"
             },
             {
               "$type": "Document",
@@ -204,8 +198,7 @@
               "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAIwCgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:43:49.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:43:49.136Z"
             },
             {
               "$type": "Document",
@@ -217,8 +210,7 @@
               "RelativeToolTip": "Controllers\\PontoController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:12:36.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T13:12:36.361Z"
             },
             {
               "$type": "Document",
@@ -243,12 +235,11 @@
               "RelativeToolTip": "Models\\Ponto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:16:49.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:16:49.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "20250410123257_MudancaPropriedadesPonto.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250410123257_MudancaPropriedadesPonto.cs",
               "RelativeDocumentMoniker": "Migrations\\20250410123257_MudancaPropriedadesPonto.cs",
@@ -256,12 +247,11 @@
               "RelativeToolTip": "Migrations\\20250410123257_MudancaPropriedadesPonto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:32:57.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T12:32:57.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "20250408124032_CriacaoDasTabelas.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250408124032_CriacaoDasTabelas.cs",
               "RelativeDocumentMoniker": "Migrations\\20250408124032_CriacaoDasTabelas.cs",
@@ -269,12 +259,11 @@
               "RelativeToolTip": "Migrations\\20250408124032_CriacaoDasTabelas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:40:33.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:40:33.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "20250410122059_CorecaoBanco.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250410122059_CorecaoBanco.cs",
               "RelativeDocumentMoniker": "Migrations\\20250410122059_CorecaoBanco.cs",
@@ -282,12 +271,11 @@
               "RelativeToolTip": "Migrations\\20250410122059_CorecaoBanco.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:20:59.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T12:20:59.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "PontoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Repositories\\PontoRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\PontoRepository.cs",
@@ -295,12 +283,11 @@
               "RelativeToolTip": "Repositories\\PontoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:44:06.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:44:06.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
@@ -308,12 +295,11 @@
               "RelativeToolTip": "Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:15:44.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:15:44.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "TipoMarcacao.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Models\\Enums\\TipoMarcacao.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoMarcacao.cs",
@@ -321,12 +307,11 @@
               "RelativeToolTip": "Models\\Enums\\TipoMarcacao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:20:46.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:20:46.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -338,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Repositories\\IRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IRepository.cs",
@@ -346,12 +331,11 @@
               "RelativeToolTip": "Repositories\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:48:01.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:48:01.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "20250408223503_MudandoPropriedadesDaTabelaPonto.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Migrations\\20250408223503_MudandoPropriedadesDaTabelaPonto.cs",
               "RelativeDocumentMoniker": "Migrations\\20250408223503_MudandoPropriedadesDaTabelaPonto.cs",
@@ -363,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "PontoCerto.API",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\PontoCerto.API.csproj",
               "RelativeDocumentMoniker": "PontoCerto.API.csproj",
@@ -374,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -386,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -398,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "TipoStatus.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Models\\Enums\\TipoStatus.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoStatus.cs",
@@ -410,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "PontoCertoContext.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Data\\PontoCertoContext.cs",
               "RelativeDocumentMoniker": "Data\\PontoCertoContext.cs",
@@ -422,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "TipoSolicitacao.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Models\\Enums\\TipoSolicitacao.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\TipoSolicitacao.cs",
