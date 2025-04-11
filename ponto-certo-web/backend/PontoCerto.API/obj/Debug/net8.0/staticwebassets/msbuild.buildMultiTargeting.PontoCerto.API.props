@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PontoCerto.API.props" />
+</Project>

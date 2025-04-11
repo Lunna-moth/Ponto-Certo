@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "098Y7O8DVvWbU9aSYBgDi+1HeKMiNPJzkNHBqUcEr08=",
+  "Source": "PontoCerto.API",
+  "BasePath": "_content/PontoCerto.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
