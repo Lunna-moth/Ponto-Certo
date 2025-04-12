@@ -7,8 +7,11 @@
   width: 280px;
   background-color: var(--cor-terciaria);
   position: fixed;
-  height: 100vh;
-  overflow: hidden; /* ou auto, se quiser scroll interno */
+  top: 81px;
+  left: 0;
+  bottom: 0;
+  height: 100vh - 81px;
+  overflow-y: auto;
 }
 
 .sidebar-content {
@@ -21,6 +24,7 @@
   margin-top: auto;
 }
 
+/* Estilo dos links/botões */
 .nav-link {
   color: white;
   font-family: var(--fonte-principal);
