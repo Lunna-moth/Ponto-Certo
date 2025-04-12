@@ -17,13 +17,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<PontoCertoContext>(options =>
-{
-  var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-      ?? Environment.GetEnvironmentVariable("DATABASE_URL");
+var url = Environment.GetEnvironmentVariable("DATABASE_URL");
 
-  options.UseNpgsql(connectionString);
-});
+var databaseUri = new Uri(url);
+var userInfo = databaseUri.UserInfo.Split(':');
+
+var connectionString = $"Host={databaseUri.Host};" +
+                       $"Port={(databaseUri.Port > 0 ? databaseUri.Port : 5432)};" +
+                       $"Database={databaseUri.AbsolutePath.TrimStart('/')};" +
+                       $"Username={userInfo[0]};" +
+                       $"Password={userInfo[1]};";
+
+builder.Services.AddDbContext<PontoCertoContext>(options =>
+    options.UseNpgsql(connectionString));
+
+
 
 
 

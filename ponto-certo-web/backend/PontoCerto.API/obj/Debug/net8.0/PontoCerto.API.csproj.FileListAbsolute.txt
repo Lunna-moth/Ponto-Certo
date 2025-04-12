@@ -171,3 +171,5 @@ C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\obj\Deb
 C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\obj\Debug\net8.0\PontoCerto.API.pdb
 C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\obj\Debug\net8.0\PontoCerto.API.genruntimeconfig.cache
 C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\obj\Debug\net8.0\ref\PontoCerto.API.dll
+C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Laura\Rennan\Ponto-Certo\ponto-certo-web\backend\PontoCerto.API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
