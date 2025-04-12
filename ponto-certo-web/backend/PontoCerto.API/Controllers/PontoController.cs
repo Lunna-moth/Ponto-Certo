@@ -56,5 +56,14 @@ namespace PontoCerto.API.Controllers
       var pontoDeletado = await _pontoRepository.Delete(id);
       return NoContent();
     }
+
+    [HttpGet("usuario/{usuarioId}")]
+    public async Task<ActionResult<IEnumerable<Ponto>>> GetPontosDoUsuario(int usuarioId)
+    {
+      var todosPontos = await _pontoRepository.GetAllAsync();
+      var pontosDoUsuario = todosPontos.Where(p => p.UsuarioId == usuarioId);
+
+      return Ok(pontosDoUsuario);
+    }
   }
 }

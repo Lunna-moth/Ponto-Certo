@@ -59,5 +59,15 @@ namespace PontoCerto.API.Controllers
 
       return NoContent();
     }
+
+    [HttpGet("usuario/{usuarioId}")]
+    public async Task<ActionResult<IEnumerable<SolicitacaoPonto>>> GetSolicitacoesDoUsuario(int usuarioId)
+    {
+      var todasSolicitacoes = await _pontoRepository.GetAllAsync();
+      var solicitacoesDoUsuario = todasSolicitacoes.Where(s => s.UsuarioId == usuarioId);
+
+      return Ok(solicitacoesDoUsuario);
+    }
+
   }
 }
