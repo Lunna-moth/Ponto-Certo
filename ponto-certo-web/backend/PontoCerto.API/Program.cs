@@ -18,7 +18,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<PontoCertoContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+  var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+      ?? Environment.GetEnvironmentVariable("DATABASE_URL");
+
+  options.UseNpgsql(connectionString);
+});
+
+
 
 builder.Services.AddScoped<IRepository<Ponto>, PontoRepository>();
 builder.Services.AddScoped<IRepository<Usuario>, UsuarioRepository>();

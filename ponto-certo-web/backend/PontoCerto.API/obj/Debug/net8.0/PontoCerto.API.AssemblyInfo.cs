@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PontoCerto.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dbb8229cc4d80304515dc5150f606be67302b08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb0e3be366db93196398c6fdac5cacc200390498")]
 [assembly: System.Reflection.AssemblyProductAttribute("PontoCerto.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PontoCerto.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
