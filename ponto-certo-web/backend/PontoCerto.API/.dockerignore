@@ -1,0 +1,17 @@
+**/.classpath
+**/.env
+**/.git
+**/.project
+**/.settings
+**/.toolstarget
+**/.vs
+**/.vscode
+**/*.user
+**/*.suo
+**/*.dll
+**/*.pdb
+**/bin
+**/obj
+**/node_modules
+*.md
+docker-compose*
