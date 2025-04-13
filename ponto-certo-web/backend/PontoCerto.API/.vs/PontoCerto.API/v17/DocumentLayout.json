@@ -124,7 +124,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Laura\\Rennan\\Ponto-Certo\\ponto-certo-web\\backend\\PontoCerto.API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwB8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T12:14:23.166Z",
               "EditorCaption": ""
@@ -199,8 +199,7 @@
               "RelativeToolTip": "Models\\Ponto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:16:49.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T12:16:49.486Z"
             },
             {
               "$type": "Document",
