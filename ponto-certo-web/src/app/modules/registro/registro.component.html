@@ -22,8 +22,11 @@
       <p>{{ dateTime | date : "dd/MM/yyyy" }}</p>
     </div>
     <div id="map"></div>
-    <button (click)="registrarPonto()" class="registro-botao">
-      Registrar Ponto
+    <button 
+      (click)="registrarPonto()" 
+      class="registro-botao"
+      [disabled]="registrando">
+      {{ registrando ? 'Registrando...' : 'Registrar Ponto' }}
     </button>
   </div>
 
@@ -31,48 +34,18 @@
   <div class="historico-container w-25 p-4">
     <div class="d-flex flex-column align-items-center">
       <p class="texto-historico fs-3">Últimos registros</p>
-      <div class="registros d-flex flex-column gap-1">
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora fs-5 mb-1">18:01</p>
-          <p class="texto-data fs-5 mb-1">23/07</p>
-        </div>
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora-entrada fs-5 mb-1">13:58</p>
-          <p class="texto-data fs-5 mb-1">23/07</p>
-        </div>
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora fs-5 mb-1">12:03</p>
-          <p class="texto-data fs-5 mb-1">23/07</p>
-        </div>
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora-entrada fs-5 mb-1">08:13</p>
-          <p class="texto-data fs-5 mb-1">23/07</p>
-        </div>
-        <hr />
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora fs-5 mb-1">18:10</p>
-          <p class="texto-data fs-5 mb-1">20/07</p>
-        </div>
-        <div class="registro d-flex flex-row gap-4">
-          <p class="texto-hora-entrada fs-5 mb-1">14:05</p>
-          <p class="texto-data fs-5 mb-1">20/07</p>
+      <div class="registros d-flex flex-column gap-2 w-100">
+        <!-- Histórico dinâmico gerado com base nos registros -->
+        <div 
+          *ngFor="let reg of registros" 
+          class="registro border-bottom py-2 px-3 rounded bg-dark text-light">
+          <p class="texto-hora fs-5 mb-1">{{ reg.dataHora | date : 'HH:mm' }}</p>
+          <p class="texto-data fs-6 mb-1">{{ reg.dataHora | date : 'dd/MM/yyyy' }}</p>
+          <p class="texto-tipo fs-6 mb-0">
+            {{ reg.tipo === 0 ? 'Entrada' : reg.tipo === 1 ? 'Saída' : 'Outro' }}
+          </p>
         </div>
       </div>
-
-      <a href="">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          class="bi bi-three-dots text-light"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-          />
-        </svg>
-      </a>
       <hr />
       <div class="d-flex flex-column align-items-center">
         <a href="">
