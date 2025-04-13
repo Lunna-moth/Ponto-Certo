@@ -3,6 +3,7 @@ import * as L from 'leaflet';
 import { TipoMarcacao } from 'src/app/enums/tipo-marcacao.enum';
 import { Registro } from 'src/app/models/registro';
 import { Usuario } from 'src/app/models/usuario';
+import { PontoService } from 'src/app/services/ponto.service';
 
 @Component({
   selector: 'app-registro',
@@ -16,8 +17,9 @@ export class RegistroComponent {
   latitude: number = 0;
   longitude: number = 0;
   map: L.Map | undefined;
+  registrando: boolean = false; // 🔄 Flag de carregamento
 
-  constructor() {
+  constructor(private pontoService: PontoService) {
     this.getUserLocation();
     setInterval(() => {
       this.dateTime = new Date();
@@ -38,16 +40,13 @@ export class RegistroComponent {
 
   loadMap(): void {
     if (this.latitude && this.longitude) {
-      // Cria o mapa centrado na localização do usuário
       this.map = L.map('map').setView([this.latitude, this.longitude], 13);
 
-      // Adiciona o tile layer do OpenStreetMap (opção gratuita)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(this.map);
 
-      // Adiciona um marcador na posição do usuário
       L.marker([this.latitude, this.longitude])
         .addTo(this.map)
         .bindPopup('Você está aqui!')
@@ -55,49 +54,42 @@ export class RegistroComponent {
     }
   }
 
-  recuperarUsuario() {
+  recuperarUsuario(): Usuario | null {
     const usuarioLogado = localStorage.getItem('user');
-
     if (usuarioLogado) {
-      const usuario: Usuario = JSON.parse(usuarioLogado);
-      return usuario;
-    } else {
-      console.log('### Falha ao recuperar usuário');
-      return new Usuario();
+      return JSON.parse(usuarioLogado);
     }
+    return null;
   }
 
   registrarPonto() {
-    // Alterna entre 0 (ENTRADA) e 1 (SAIDA)
-    this.registro.tipo = this.registro.tipo === 0 ? 1 : 0; // 0 = ENTRADA, 1 = SAIDA
-    this.registro.dataHora = this.dateTime.toISOString(); // Guarda a data no formato ISO
-    this.registro.latitude = this.latitude;
-    this.registro.longitude = this.longitude;
-    this.registro.usuario = this.recuperarUsuario();
-  
-    console.log('### Ponto Registrado => ', this.registro);
-    this.salvarRegistrosNoStorage();
-  }
+    const usuarioIdString = localStorage.getItem('usuarioId');
 
-  salvarRegistrosNoStorage() {
-    const registrosString = localStorage.getItem('registro');
-    let registros: Registro[] = [];
-
-    if (registrosString) {
-      try {
-        registros = JSON.parse(registrosString); // Converte JSON para array
-        if (!Array.isArray(registros)) {
-          registros = []; // Garante que seja um array
-        }
-      } catch (error) {
-        console.error('Erro ao recuperar registros do localStorage:', error);
-        registros = [];
-      }
+    if (!usuarioIdString) {
+      console.error('Usuário não está logado!');
+      return;
     }
 
-    registros.push(this.registro);
+    const usuarioId = parseInt(usuarioIdString, 10);
+    this.registrando = true; // ✅ Início da ação
 
-    // Salva o array atualizado no localStorage
-    localStorage.setItem('registro', JSON.stringify(registros));
+    // Alterna o tipo: Entrada (0) → Saída (1) → Entrada (0)...
+    this.registro.tipo = this.registro.tipo === 0 ? 1 : 0;
+    this.registro.dataHora = this.dateTime.toISOString();
+    this.registro.latitude = this.latitude;
+    this.registro.longitude = this.longitude;
+    this.registro.usuarioId = usuarioId;
+
+    this.pontoService.registrarPonto(this.registro).subscribe(
+      (response) => {
+        console.log('✅ Ponto registrado com sucesso!', response);
+        this.registros.unshift(response); // ⬆ Insere no topo da lista
+        this.registrando = false;
+      },
+      (error) => {
+        console.error('❌ Erro ao registrar ponto:', error);
+        this.registrando = false;
+      }
+    );
   }
 }

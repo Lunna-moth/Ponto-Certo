@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, tap, of } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
 import { Router } from '@angular/router';
 import { Usuario } from '../models/usuario';
 
@@ -13,9 +13,12 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(email: string, senha: string): Observable<Usuario | null> {
-    const body = { email, senha };
+    const params = new HttpParams()
+      .set('email', email)
+      .set('senha', senha);
   
-    return this.http.post<Usuario>(`${this.apiUrl}/login`, body).pipe(
+    // Não manda body, só os parâmetros
+    return this.http.post<Usuario>(`${this.apiUrl}/login`, null, { params }).pipe(
       tap((usuario) => {
         if (usuario) {
           localStorage.setItem('user', JSON.stringify(usuario));
