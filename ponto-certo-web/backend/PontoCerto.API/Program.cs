@@ -20,6 +20,17 @@ builder.Services.AddSwaggerGen();
 // ⛑️ Configura CORS
 builder.Services.AddCors(options =>
 {
+  options.AddPolicy("AllowFrontend",
+      policy =>
+      {
+        policy.WithOrigins("https://ponto-certo-2.onrender.com") // URL do seu front-end hospedado
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+      });
+});
+
+builder.Services.AddCors(options =>
+{
   options.AddPolicy("AllowFrontend", policy =>
   {
     policy.WithOrigins("http://localhost:4200") // libera o front em Angular

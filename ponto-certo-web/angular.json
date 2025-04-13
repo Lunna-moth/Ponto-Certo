@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/PontoCerto/",
             "outputPath": "dist/ponto-certo-web",
             "index": "src/index.html",
             "main": "src/main.ts",
