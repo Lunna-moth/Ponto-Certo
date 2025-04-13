@@ -17,6 +17,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// ⛑️ Configura CORS
+builder.Services.AddCors(options =>
+{
+  options.AddPolicy("AllowFrontend", policy =>
+  {
+    policy.WithOrigins("http://localhost:4200") // libera o front em Angular
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+  });
+});
+
 var url = Environment.GetEnvironmentVariable("DATABASE_URL");
 
 var databaseUri = new Uri(url);
@@ -31,10 +42,6 @@ var connectionString = $"Host={databaseUri.Host};" +
 builder.Services.AddDbContext<PontoCertoContext>(options =>
     options.UseNpgsql(connectionString));
 
-
-
-
-
 builder.Services.AddScoped<IRepository<Ponto>, PontoRepository>();
 builder.Services.AddScoped<IRepository<Usuario>, UsuarioRepository>();
 builder.Services.AddScoped<IRepository<SolicitacaoPonto>, SolicitacaoPontoRepository>();
@@ -44,6 +51,9 @@ var app = builder.Build();
 // Middleware
 app.UseSwagger();
 app.UseSwaggerUI();
+
+// 🧠 ATIVA o CORS ANTES do MapControllers()
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 app.MapControllers();
