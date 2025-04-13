@@ -33,14 +33,21 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.formulario.valid) {
-      this.usuario.login = this.formulario.get('login')?.value;
-      this.usuario.senha = this.formulario.get('senha')?.value;
+      const email = this.formulario.get('login')?.value;
+      const senha = this.formulario.get('senha')?.value;
 
-      if (this.authService.login(this.usuario)) {
-        this.router.navigate(['home']);
-      } else {
-        console.log('Usuário ou senha inválidos!');
-      }
+      this.authService.login(email, senha).subscribe({
+        next: (usuario) => {
+          if (usuario) {
+            this.router.navigate(['home']);
+          } else {
+            console.log('Usuário ou senha inválidos!');
+          }
+        },
+        error: (erro) => {
+          console.error('Erro de autenticação:', erro);
+        },
+      })
     }
   }
 }

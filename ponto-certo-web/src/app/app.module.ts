@@ -17,6 +17,9 @@ import { MeuPerfilComponent } from './modules/meu-perfil/meu-perfil.component';
 import { MinhaEquipeComponent } from './modules/minha-equipe/minha-equipe.component';
 import { ConfiguracaoComponent } from './modules/configuracao/configuracao.component';
 
+// Adicionando o HttpClientModule
+import { HttpClientModule } from '@angular/common/http';  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +41,8 @@ import { ConfiguracaoComponent } from './modules/configuracao/configuracao.compo
     CommonModule,
     TableModule,
     ButtonModule,
+    // Incluindo o HttpClientModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
