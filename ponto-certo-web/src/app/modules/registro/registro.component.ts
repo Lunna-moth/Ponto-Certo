@@ -68,13 +68,13 @@ export class RegistroComponent {
   }
 
   registrarPonto() {
-    this.registro.tipoMarcacao = TipoMarcacao.ENTRADA;
-    this.registro.data = this.dateTime;
-    this.registro.dataIsoString = this.dateTime.toISOString();
+    // Alterna entre 0 (ENTRADA) e 1 (SAIDA)
+    this.registro.tipo = this.registro.tipo === 0 ? 1 : 0; // 0 = ENTRADA, 1 = SAIDA
+    this.registro.dataHora = this.dateTime.toISOString(); // Guarda a data no formato ISO
     this.registro.latitude = this.latitude;
     this.registro.longitude = this.longitude;
     this.registro.usuario = this.recuperarUsuario();
-
+  
     console.log('### Ponto Registrado => ', this.registro);
     this.salvarRegistrosNoStorage();
   }
@@ -89,13 +89,6 @@ export class RegistroComponent {
         if (!Array.isArray(registros)) {
           registros = []; // Garante que seja um array
         }
-        registros.map((registro) => {
-          if (registro.tipoMarcacao === TipoMarcacao.ENTRADA) {
-            this.registro.tipoMarcacao = TipoMarcacao.SAIDA;
-          } else {
-            this.registro.tipoMarcacao = TipoMarcacao.ENTRADA;
-          }
-        });
       } catch (error) {
         console.error('Erro ao recuperar registros do localStorage:', error);
         registros = [];

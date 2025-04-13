@@ -39,4 +39,13 @@ export class HistoricoComponent implements OnInit {
         },
       });
   }
+
+  formatarTipo(tipo: number): string {
+    switch (tipo) {
+      case 0: return 'Entrada';
+      case 1: return 'Saída';
+      default: return 'Desconhecido';
+    }
+  }
+  
 }

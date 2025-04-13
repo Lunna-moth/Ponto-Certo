@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, tap, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { Usuario } from '../models/usuario';
 
@@ -6,15 +8,23 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private router: Router) {}
+  private apiUrl = 'https://ponto-certo-3wj2.onrender.com/api/Usuario';
 
-  login(usuario: Usuario): boolean {
-    if (usuario.login === 'admin' && usuario.senha === '1234') {
-      localStorage.setItem('user', JSON.stringify(usuario));
-      return true;
-    }
-    return false;
+  constructor(private http: HttpClient, private router: Router) {}
+
+  login(email: string, senha: string): Observable<Usuario | null> {
+    const body = { email, senha };
+  
+    return this.http.post<Usuario>(`${this.apiUrl}/login`, body).pipe(
+      tap((usuario) => {
+        if (usuario) {
+          localStorage.setItem('user', JSON.stringify(usuario));
+          localStorage.setItem('usuarioId', usuario.id.toString());
+        }
+      })
+    );
   }
+  
 
   isAuthenticated(): boolean {
     return localStorage.getItem('user') !== null;

@@ -67,20 +67,17 @@ namespace PontoCerto.API.Controllers
     }
 
     [HttpPost("login")]
-    public async Task<ActionResult<Usuario>> Login([FromBody] Usuario usuarioLogin)
+    public async Task<ActionResult<Usuario>> Login(string email, string senha)
     {
       var usuarios = await _usuarioRepository.GetAllAsync();
 
       var usuario = usuarios.FirstOrDefault(u =>
-          u.Email == usuarioLogin.Email && u.Senha == usuarioLogin.Senha);
+          u.Email == email && u.Senha == senha);
 
       if (usuario == null)
         return Unauthorized("Email ou senha inválidos.");
 
       return Ok(usuario); // Aqui você pode depois retornar um token, se quiser adicionar JWT futuramente
     }
-
-
-
   }
 }
